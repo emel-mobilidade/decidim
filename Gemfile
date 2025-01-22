@@ -19,7 +19,7 @@ gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", 
 gem "bootsnap", "~> 1.7"
 gem "health_check"
 gem "puma", ">= 6.3.1"
-#gem "twilio-ruby"
+gem "twilio-ruby"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
