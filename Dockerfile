@@ -8,7 +8,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates c
     apt-get update && apt-get install -y nodejs yarn \
     build-essential \
     postgresql-client \
-    p7zip-full \
+    p7zip \
     libpq-dev && \
     apt-get clean
 
@@ -84,11 +84,15 @@ RUN apt-get update && \
     apt-get install -y postgresql-client \
     imagemagick \
     curl \
-    p7zip-full \
+    p7zip \
+    wkhtmltopdf \
     supervisor && \
     apt-get clean
 
 EXPOSE 3000
+
+ARG CAPROVER_GIT_COMMIT_SHA=${CAPROVER_GIT_COMMIT_SHA}
+ENV APP_REVISION=${CAPROVER_GIT_COMMIT_SHA}
 
 ENV RAILS_LOG_TO_STDOUT true
 ENV RAILS_SERVE_STATIC_FILES true

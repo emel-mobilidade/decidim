@@ -30,4 +30,6 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  twilio_sms_gateway_service:
+    deliver_code:
+      body: 'Your verification code for %{organization} is: %{code}'

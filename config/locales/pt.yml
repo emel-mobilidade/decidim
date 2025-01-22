@@ -1,0 +1,4 @@
+pt:
+  twilio_sms_gateway_service:
+    deliver_code:
+      body: 'Seu código de verificação para %{organization} é: %{code}'
