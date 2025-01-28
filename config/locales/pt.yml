@@ -2,3 +2,10 @@ pt:
   twilio_sms_gateway_service:
     deliver_code:
       body: 'Seu código de verificação para %{organization} é: %{code}'
+  decidim:
+    verifications:
+      sms:
+        authorizations:
+          create:
+            erro: Houve um problema com sua solicitação. Por favor, certifique-se de que você digitou um número de telefone válido (incluindo o prefixo do país) e tente novamente.
+      

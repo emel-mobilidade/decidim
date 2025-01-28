@@ -33,3 +33,10 @@ en:
   twilio_sms_gateway_service:
     deliver_code:
       body: 'Your verification code for %{organization} is: %{code}'
+  decidim:
+    verifications:
+      sms:
+        authorizations:
+          create:
+            error: There was a problem with your request. Please make sure you have entered a valid phone number (including the country prefix) and try again.
+      

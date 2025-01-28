@@ -19,6 +19,9 @@ class TwilioSmsGatewayService
       from: ENV.fetch("TWILIO_PHONE_NUMBER", nil),
       to: mobile_phone_number
     )
+  rescue StandardError => e
+    Rails.logger.error("Error sending SMS: #{e.message}")
+    false
   end
 
   def organization_name
